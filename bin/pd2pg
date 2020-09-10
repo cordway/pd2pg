@@ -172,7 +172,7 @@ class PG2PD
       agent_id: le["agent"] && le["agent"]["id"],
       channel_type: le["channel"] && le["channel"]["type"],
       user_id: le["user"] && le["user"]["id"],
-      notification_type: le["notification"] && le["notification"]["type"],
+      notification_type: le["channel"] && le["channel"]["notification"] && le["channel"]["notification"]["type"],
       assigned_user_id: le["assigned_user"] && le["assigned_user"]["id"]
     }
   end
